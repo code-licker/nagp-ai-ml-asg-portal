@@ -1,0 +1,22 @@
+{
+  "userName": "Rohan Baranwal",
+  "subtitle": "NAGP AI & Machine Learning Track",
+  "assignments": [
+    {
+      "id": "ds-churn",
+      "title": "Assignment 1: Customer Churn Prediction",
+      "badge": "Data Science & ML",
+      "description": "End-to-end churn classification pipeline evaluating Decision Trees, GridSearchCV hyperparameter tuning, class imbalance correction, and ensemble models (Random Forest, Gradient Boosting) with a 76.5% recall and $493k financial ROI simulation.",
+      "tags": ["Scikit-Learn", "Decision Tree", "GridSearchCV", "Flask API", "Docker"],
+      "url": "/assignment-1/"
+    },
+    {
+      "id": "ai-travel",
+      "title": "Assignment 2: AI Travel Planning Assistant",
+      "badge": "Generative AI & Agents",
+      "description": "Context-aware travel planner for Singapore combining a document-based RAG knowledge base (Chroma DB) with live Model Context Protocol (FastMCP) tools for real-time weather forecasts and currency conversion.",
+      "tags": ["LangChain", "Google Gemini", "FastMCP", "Chroma RAG", "Streamlit"],
+      "url": "/assignment-2/"
+    }
+  ]
+}

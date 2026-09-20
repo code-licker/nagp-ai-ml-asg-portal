@@ -1,0 +1,58 @@
+<div class="portal-layout">
+  <!-- Top Material App Bar -->
+  <header class="app-bar">
+    <div class="app-bar-brand">
+      <span class="material-symbols-outlined brand-icon">school</span>
+      <div>
+        <h1 class="brand-name">{{ userName }}</h1>
+        <p class="brand-subtitle">{{ subtitle }}</p>
+      </div>
+    </div>
+    <div class="app-bar-actions">
+      <button class="theme-toggle-btn" (click)="toggleTheme()" [attr.aria-label]="isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'">
+        <span class="material-symbols-outlined">
+          {{ isDarkMode ? 'light_mode' : 'dark_mode' }}
+        </span>
+        <span class="theme-label">{{ isDarkMode ? 'Light' : 'Dark' }}</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="main-container">
+    <section class="intro-section">
+      <h2 class="section-title">Assignment Showcase</h2>
+      <p class="section-desc">
+        Demonstration portal for Nagarro Advanced Graduate Program (NAGP). Click any project card below to open the application in a new browser tab.
+      </p>
+    </section>
+
+    <!-- Cards Grid -->
+    <div class="cards-grid">
+      <article class="material-card" *ngFor="let item of assignments">
+        <div class="card-header">
+          <span class="badge">{{ item.badge }}</span>
+          <h3 class="card-title">{{ item.title }}</h3>
+        </div>
+
+        <p class="card-description">{{ item.description }}</p>
+
+        <div class="tags-container">
+          <span class="tag" *ngFor="let tag of item.tags">{{ tag }}</span>
+        </div>
+
+        <div class="card-actions">
+          <button class="btn-launch" (click)="openAssignment(item.url)">
+            <span>Open Application</span>
+            <span class="material-symbols-outlined btn-icon">open_in_new</span>
+          </button>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <!-- Clean Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 {{ userName }} &bull; NAGP AI &amp; Machine Learning Portfolio</p>
+  </footer>
+</div>
